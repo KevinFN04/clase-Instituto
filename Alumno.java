@@ -49,4 +49,30 @@ public class Alumno
         }
         return aprobado;
     }
+    
+    public void datosAlumno(){
+        String notas = "Notas: ";
+        int index = 0;
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("Nº de clase: " + numeroClase);
+        while (index < listaNotas.size()){
+            if (index < listaNotas.size() - 1){
+                notas = notas + listaNotas.get(index) + ", ";
+            }
+            else{
+                notas = notas + listaNotas.get(index) + ".";
+            }
+            index++;
+        }
+        System.out.println("Notas: " + notas);
+        System.out.println("Notas media: " + notaMedia());
+        if (!estaAprobado()){
+            System.out.println("Suspenso");
+        }
+        else{
+            System.out.println("Aprobado");
+        }
+
+    }
 }
