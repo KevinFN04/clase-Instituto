@@ -41,4 +41,12 @@ public class Alumno
         }
         return notaMedia;
     }
+    
+    public boolean estaAprobado(){
+        boolean aprobado = false;
+        if (notaMedia() >= NOTA_MINIMA){
+            aprobado = true;
+        }
+        return aprobado;
+    }
 }
